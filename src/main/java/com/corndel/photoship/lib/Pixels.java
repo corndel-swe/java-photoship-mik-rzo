@@ -45,7 +45,8 @@ public class Pixels {
      */
     public static List<Integer> stripBlue(List<Integer> rgb) {
         // Set the blue value (index 2) to 0
-        return null;
+        rgb.set(2, 0);
+        return rgb;
     }
 
     /**
