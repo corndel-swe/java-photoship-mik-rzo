@@ -30,7 +30,8 @@ public class Pixels {
      */
     public static List<Integer> stripGreen(List<Integer> rgb) {
         // Set the green value (index 1) to 0
-        return null;
+        rgb.set(1, 0);
+        return rgb;
     }
 
     /**
