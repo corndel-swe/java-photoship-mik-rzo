@@ -100,10 +100,17 @@ public class Pixels {
      */
     public static List<Integer> blackAndWhite(List<Integer> rgb) {
         // Calculate the average of the red, green, and blue values
-
+        int avgRgbValue = (rgb.get(0) + rgb.get(1) + rgb.get(2)) / 3;
         // If the average is below 128, set all values to 0 (black); otherwise, set them
         // to 255 (white)
-        return null;
+        for (int i = 0; i < 3; i++) {
+            if (avgRgbValue < 128) {
+                rgb.set(i, 0);
+            } else {
+                rgb.set(i, 255);
+            }
+        }
+        return rgb;
     }
 
     /**
