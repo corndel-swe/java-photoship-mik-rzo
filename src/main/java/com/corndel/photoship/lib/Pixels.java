@@ -125,8 +125,17 @@ public class Pixels {
      * @return The RGB list with only the specified color channel.
      */
     public static List<Integer> colorChannel(List<Integer> rgb, char color) {
-        // TODO
-        return null;
+        if (color == 'r') {
+            rgb.set(1, 0);
+            rgb.set(2, 0);
+        } else if (color == 'g') {
+            rgb.set(0, 0);
+            rgb.set(2, 0);
+        } else {
+            rgb.set(0, 0);
+            rgb.set(1, 0);
+        }
+        return rgb;
     }
 
     /**
